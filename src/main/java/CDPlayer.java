@@ -1,26 +1,20 @@
 import java.util.ArrayList;
 
-public class CDPlayer {
+public class CDPlayer extends Component{
 
-    private String makeName;
-    private String modelName;
+
     private int capacity;
     private ArrayList<CDPlayer> cdPlayer;
 
     public CDPlayer(String makeName, String modelName, int capacity){
-
-        this.makeName = makeName;
-        this.modelName = modelName;
+        super(makeName, modelName);
         this.capacity = capacity;
         this.cdPlayer = new ArrayList<>();
     }
 
-
-    public String getmakeName() {
-        return this.makeName;
+    public String play(String format){
+        return "I am Playing A " + format;
     }
 
-    public String getmodelName() {
-        return this.modelName;
-    }
+
 }
